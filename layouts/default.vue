@@ -12,7 +12,9 @@
         </div>
     </nav>
 
+    <main class=" mx-auto px-4 py-8 min-h-screen">
     <slot />
+  </main>
     <footer>
         <div class="container">
             <p>&copy; 2024 Little Learners. Tous droits réservés.</p>

@@ -3,9 +3,9 @@
         <!-- NAVIGATION -->
     <nav>
         <div class="container">
-            <a href="#" class="logo">Little Learners</a>
+            <a href="#" class="logo">OFIECS</a>
             <ul>
-                <li><a href="#programmes">Programmes</a></li>
+                <li><a href="#apropos">A propos</a></li>
                 <li><a href="#galerie">Galerie</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>

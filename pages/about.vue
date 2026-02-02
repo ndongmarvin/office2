@@ -245,20 +245,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div>
-                <div class="footer-brand">Little Learners</div>
-                <div class="footer-tagline">Crèche agréée OFIECS depuis 2009</div>
-            </div>
-            <div class="footer-links">
-                <a href="index.html">Accueil</a>
-                <a href="#">Confidentialité</a>
-                <a href="#">Conditions</a>
-            </div>
-        </div>
-    </footer>
 
 
     </template>

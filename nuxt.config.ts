@@ -58,7 +58,6 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       title: 'Système de Gestion de Transport',
       meta: [
-        { name: 'description', content: 'Application de gestion de transport pour les agences de voyage' },
         // Open Graph
         { property: 'og:site_name', content: 'Little Learners' },
         { property: 'og:type', content: 'website' },
