@@ -1,0 +1,578 @@
+/* Main global CSS (project-specific overrides).
+   This file existed in nuxt config but was missing on disk, which caused
+   Vite/Vitest to fail with "Cannot find module '~/assets/css/main.css'".
+
+   Keep this file minimal — put app-specific overrides here.
+*/
+
+/* Example small reset / overrides (Tailwind is provided by tailwind.css) */
+:root {
+  --content-max-width: 1200px;
+}
+
+/* utility class example used in some pages */
+.container {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* keep file intentionally small */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 64px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 48px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #666666;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 240px 0 160px;
+        }
+
+        .hero h1 {
+            font-size: 112px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -3px;
+            margin-bottom: 48px;
+            max-width: 900px;
+        }
+
+        .hero p {
+            font-size: 32px;
+            font-weight: 300;
+            color: #666666;
+            margin-bottom: 80px;
+            max-width: 700px;
+            line-height: 1.4;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 20px 48px;
+            background: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #333333;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+            border-radius: 32px;
+            margin-top: 120px;
+        }
+
+        /* STATS */
+        .stats {
+            padding: 200px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 120px;
+            max-width: 900px;
+        }
+
+        .stat-number {
+            font-size: 96px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 16px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #666666;
+            font-weight: 400;
+        }
+
+        /* FEATURES */
+        .feature-section {
+            padding: 200px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 120px;
+            align-items: center;
+            margin-bottom: 320px;
+        }
+
+        .feature-grid:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            border-radius: 32px;
+        }
+
+        .feature-content h2 {
+            font-size: 88px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 40px;
+        }
+
+        .feature-content p {
+            font-size: 28px;
+            font-weight: 300;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        /* PROGRAMS */
+        .programs {
+            padding: 200px 0;
+            background: #fafafa;
+        }
+
+        .section-header {
+            margin-bottom: 160px;
+        }
+
+        .section-header h2 {
+            font-size: 96px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 32px;
+        }
+
+        .section-header p {
+            font-size: 28px;
+            font-weight: 300;
+            color: #666666;
+            max-width: 700px;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+        }
+
+        .program-card {
+            cursor: pointer;
+        }
+
+        .program-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 32px;
+            margin-bottom: 40px;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .program-card:hover .program-image {
+            transform: scale(1.02);
+        }
+
+        .program-meta {
+            font-size: 14px;
+            color: #999999;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .program-card h3 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .program-card p {
+            font-size: 20px;
+            color: #666666;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* FULL WIDTH IMAGE */
+        .full-image-section {
+            padding: 200px 0;
+        }
+
+        .full-image {
+            width: 100%;
+            height: 900px;
+            object-fit: cover;
+            border-radius: 32px;
+        }
+
+        /* GALLERY */
+        .gallery {
+            padding: 200px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            gap: 64px;
+        }
+
+        .gallery-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+        }
+
+        .gallery-row-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 64px;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 32px;
+        }
+
+        .gallery-image-small {
+            height: 450px;
+        }
+
+        .gallery-image-full {
+            height: 700px;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 200px 0;
+            background: #fafafa;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+        }
+
+        .testimonial-stars {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 32px;
+        }
+
+        .testimonial-text {
+            font-size: 24px;
+            font-weight: 300;
+            color: #333333;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-author {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-role {
+            font-size: 16px;
+            color: #999999;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            padding: 200px 0;
+        }
+
+        .final-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 120px;
+            align-items: center;
+        }
+
+        .final-cta h2 {
+            font-size: 88px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 48px;
+        }
+
+        .final-cta p {
+            font-size: 28px;
+            font-weight: 300;
+            color: #666666;
+            line-height: 1.5;
+            margin-bottom: 60px;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 200px 0;
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 96px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 80px;
+        }
+
+        .contact-info {
+            margin-bottom: 80px;
+        }
+
+        .contact-info p {
+            font-size: 28px;
+            color: #999999;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .btn-white {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .btn-white:hover {
+            background: #f0f0f0;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 80px 0;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-brand {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .footer-tagline {
+            font-size: 14px;
+            color: #999999;
+            margin-top: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 48px;
+        }
+
+        .footer-links a {
+            color: #999999;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #000000;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 40px;
+            }
+
+            .hero h1 {
+                font-size: 72px;
+            }
+
+            .hero p,
+            .feature-content p,
+            .final-cta p {
+                font-size: 24px;
+            }
+
+            .feature-content h2,
+            .final-cta h2 {
+                font-size: 64px;
+            }
+
+            .section-header h2,
+            .contact h2 {
+                font-size: 72px;
+            }
+
+            .feature-grid,
+            .final-grid,
+            .gallery-row-2,
+            .program-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                gap: 80px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .hero-image,
+            .feature-image,
+            .full-image,
+            .gallery-image,
+            .gallery-image-full {
+                height: 500px;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding: 160px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            .btn {
+                padding: 16px 32px;
+                font-size: 16px;
+            }
+
+            .feature-section,
+            .programs,
+            .gallery,
+            .testimonials,
+            .final-cta,
+            .contact {
+                padding: 120px 0;
+            }
+
+            .stats {
+                padding: 120px 0;
+            }
+
+            .stat-number {
+                font-size: 64px;
+            }
+
+            .section-header h2 {
+                font-size: 48px;
+            }
+
+            .feature-content h2 {
+                font-size: 48px;
+            }
+
+            .program-card h3 {
+                font-size: 32px;
+            }
+
+            .contact h2 {
+                font-size: 48px;
+            }
+
+            .feature-grid {
+                margin-bottom: 160px;
+            }
+        }
