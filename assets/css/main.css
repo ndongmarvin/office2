@@ -560,6 +560,14 @@ h2 {
             .gallery-image,
             .gallery-image-full {
                 height: 500px;
+                border-radius: 24px;
+                object-fit: cover;
+            }
+
+            .program-image {
+                height: 400px;
+                border-radius: 24px;
+                object-fit: cover;
             }
 
             
@@ -632,8 +640,49 @@ h2 {
                 margin-bottom: 160px;
             }
 
+            /* Apple-style impactful images on mobile */
             img, .hero-image, .feature-image, .program-image, .gallery-image, .full-image {
                 max-width: 100%;
                 height: auto;
+                border-radius: 18px;
+            }
+
+            .hero-image {
+                height: 400px;
+                object-fit: cover;
+                margin-top: 60px;
+                border-radius: 18px;
+            }
+
+            .feature-image {
+                height: 400px;
+                object-fit: cover;
+                border-radius: 18px;
+                margin-bottom: 40px;
+            }
+
+            .program-image {
+                height: 320px;
+                object-fit: cover;
+                border-radius: 18px;
+                margin-bottom: 24px;
+            }
+
+            .gallery-image {
+                height: 300px;
+                object-fit: cover;
+                border-radius: 18px;
+            }
+
+            .gallery-image-small {
+                height: 250px;
+                border-radius: 18px;
+            }
+
+            .gallery-image-full,
+            .full-image {
+                height: 400px;
+                object-fit: cover;
+                border-radius: 18px;
             }
         }

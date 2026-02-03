@@ -1153,20 +1153,22 @@ export default {
   }
 
   .visual-image {
-    height: 400px;
-    border-radius: 24px;
+    height: 350px;
+    border-radius: 18px;
   }
 
   .visual-image-full {
-    height: 400px;
+    height: 450px;
+    border-radius: 18px;
   }
 
   .visual-overlay h3 {
-    font-size: 36px;
+    font-size: 32px;
+    letter-spacing: -1px;
   }
 
   .visual-overlay p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .split-content {
@@ -1182,11 +1184,20 @@ export default {
   }
 
   .split-image {
-    min-height: 300px;
+    min-height: 350px;
+    border-radius: 18px;
+  }
+
+  .split-image img {
+    border-radius: 18px;
   }
 
   .full-width-image {
     padding-bottom: 75%; /* More square on mobile */
+  }
+
+  .full-width-image img {
+    border-radius: 18px;
   }
 }
 </style>
