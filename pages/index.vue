@@ -1,245 +1,661 @@
 <template>
-<main>
-        <!-- NAVIGATION -->
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">OFIECS</a>
-            <ul>
-                <li><a href="#apropos">A propos</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
+  <div class="home-page">
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>Où chaque enfant s'épanouit</h1>
-            <p>Crèche agréée OFIECS. Éducation d'excellence pour les 6 mois à 5 ans.</p>
-            <a href="#contact" class="btn">Réserver une visite</a>
-            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=2000&q=80" alt="Enfants heureux" class="hero-image">
+            <div class="hero-badge">🏛️ Institution Publique</div>
+            <h1>OFIECS — Office d'Inspection de l'Éducation</h1>
+            <p>Garantir l'excellence éducative au Sénégal par l'inspection rigoureuse des établissements d'enseignement et des services à l'enfance.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary">Demander une inspection</a>
+                <a href="/about" class="btn-secondary">En savoir plus</a>
+            </div>
         </div>
     </section>
 
     <!-- STATS -->
     <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div>
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Années d'expérience</div>
-                </div>
-                <div>
-                    <div class="stat-number">120+</div>
-                    <div class="stat-label">Enfants épanouis</div>
-                </div>
-                <div>
-                    <div class="stat-number">4.9</div>
-                    <div class="stat-label">Note parents</div>
-                </div>
+      <div class="container">
+        <div class="stats-wrapper">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-icon">📊</div>
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Inspecteurs qualifiés</div>
+              <div class="stat-description">Professionnels certifiés et expérimentés</div>
             </div>
+            <div class="stat-item">
+              <div class="stat-icon">🏫</div>
+              <div class="stat-number">150+</div>
+              <div class="stat-label">Établissements inspectés</div>
+              <div class="stat-description">Dans toutes les régions du Sénégal</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">✓</div>
+              <div class="stat-number">99%</div>
+              <div class="stat-label">Taux de conformité</div>
+              <div class="stat-description">Objectif de couverture 2026</div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="feature-section">
-        <div class="container">
-            
-            <!-- Feature 1 -->
-            <div class="feature-grid">
-                <img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=1400&q=80" alt="Sécurité totale" class="feature-image">
-                <div class="feature-content">
-                    <h2>Sécurité totale</h2>
-                    <p>Infrastructures certifiées OFIECS. Surveillance 24/7. Protocoles d'urgence testés régulièrement.</p>
-                </div>
-            </div>
+    <FeatureSection
+      title="Inspections rigoureuses"
+      description="Évaluation complète de la qualité de l'éducation, de la sécurité et du bien-être des enfants. Méthodologie éprouvée et transparente."
+      image-src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=1400&q=80"
+      image-alt="Inspection OFIECS"
+      :features="[
+        'Évaluation complète et objective',
+        'Méthodologie standardisée',
+        'Critères clairs et transparents',
+        'Rapports détaillés'
+      ]"
+    />
 
-            <!-- Feature 2 -->
-            <div class="feature-grid">
-                <div class="feature-content" style="order: 1;">
-                    <h2>Équipe d'experts</h2>
-                    <p>Éducateurs certifiés petite enfance. Formation continue obligatoire. Ratios optimaux garantis.</p>
-                </div>
-                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1400&q=80" alt="Équipe qualifiée" class="feature-image" style="order: 2;">
-            </div>
+    <FeatureSection
+      title="Inspecteurs certifiés"
+      description="Plus de 20 professionnels qualifiés avec expertise en éducation, protection de l'enfance et gestion. Formation continue obligatoire."
+      image-src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1400&q=80"
+      image-alt="Équipe d'inspecteurs"
+      :reverse="true"
+      :features="[
+        'Inspecteurs certifiés et qualifiés',
+        'Expertise en éducation',
+        'Formation continue obligatoire',
+        'Objectivité garantie'
+      ]"
+    />
 
-            <!-- Feature 3 -->
-            <div class="feature-grid">
-                <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=1400&q=80" alt="Apprentissage créatif" class="feature-image">
-                <div class="feature-content">
-                    <h2>Apprentissage créatif</h2>
-                    <p>Programmes adaptés par âge. Activités artistiques quotidiennes. Éveil STEM et développement socio-émotionnel.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    <FeatureSection
+      title="Rapports détaillés"
+      description="Chaque inspection produit un rapport complet avec constats, recommandations et plan d'amélioration. Transparence et objectivité garanties."
+      image-src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=1400&q=80"
+      image-alt="Rapports d'inspection"
+      :features="[
+        'Rapports complets et structurés',
+        'Constats et recommandations',
+        'Plan d\'amélioration détaillé',
+        'Suivi personnalisé'
+      ]"
+    />
 
     <!-- PROGRAMS -->
-    <section id="programmes" class="programs">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nos programmes</h2>
-                <p>Trois programmes adaptés à chaque étape du développement.</p>
-            </div>
-
-            <div class="program-grid">
-                
-                <div class="program-card">
-                    <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&q=80" alt="Bébés" class="program-image">
-                    <div class="program-meta">6-18 mois</div>
-                    <h3>Bébés</h3>
-                    <p>Soins individualisés, éveil sensoriel, routines sécurisantes.</p>
-                </div>
-
-                <div class="program-card">
-                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80" alt="Tout-petits" class="program-image">
-                    <div class="program-meta">18 mois - 3 ans</div>
-                    <h3>Tout-petits</h3>
-                    <p>Apprentissage actif, développement social, exploration créative.</p>
-                </div>
-
-                <div class="program-card">
-                    <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=800&q=80" alt="Préscolaire" class="program-image">
-                    <div class="program-meta">3-5 ans</div>
-                    <h3>Préscolaire</h3>
-                    <p>Préparation à l'école, littératie, mathématiques, sciences.</p>
-                </div>
-
-            </div>
+    <section class="programs">
+      <div class="container">
+        <div class="section-header">
+          <h2>Domaines d'inspection</h2>
+          <p>Cinq domaines clés évalués lors de chaque inspection.</p>
         </div>
+
+        <div class="program-grid">
+          <ProgramCard
+            v-for="program in programs"
+            :key="program.id"
+            :title="program.title"
+            :description="program.description"
+            :image-src="program.image"
+            :age-range="program.ageRange"
+            @click="handleProgramClick(program)"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- FULL WIDTH IMAGE -->
     <section class="full-image-section">
-        <div class="container">
-            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=2000&q=80" alt="Journée à la crèche" class="full-image">
-        </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="galerie" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2>Galerie</h2>
-            </div>
-
-            <div class="gallery-grid">
-                <!-- Row 1: 2 images -->
-                <div class="gallery-row-2">
-                    <img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=1200&q=80" alt="Galerie 1" class="gallery-image">
-                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&q=80" alt="Galerie 2" class="gallery-image">
-                </div>
-
-                <!-- Row 2: 3 images -->
-                <div class="gallery-row-3">
-                    <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=800&q=80" alt="Galerie 3" class="gallery-image gallery-image-small">
-                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&q=80" alt="Galerie 4" class="gallery-image gallery-image-small">
-                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80" alt="Galerie 5" class="gallery-image gallery-image-small">
-                </div>
-
-                <!-- Row 3: Full width -->
-                <img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=2000&q=80" alt="Galerie 6" class="gallery-image gallery-image-full">
-            </div>
-        </div>
+      <div class="container">
+        <img 
+          src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=2000&q=80" 
+          alt="Inspection OFIECS" 
+          class="full-image"
+        >
+      </div>
     </section>
 
     <!-- TESTIMONIALS -->
     <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Témoignages</h2>
-            </div>
-
-            <div class="testimonial-grid">
-                
-                <div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Notre fille s'épanouit pleinement ici. Les éducateurs sont exceptionnels."</p>
-                    <div class="testimonial-author">Aminata Diallo</div>
-                    <div class="testimonial-role">Maman de Fatou</div>
-                </div>
-
-                <div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"L'accréditation OFIECS nous a rassurés. Excellent choix pour notre fils."</p>
-                    <div class="testimonial-author">Moussa Sarr</div>
-                    <div class="testimonial-role">Papa de Mamadou</div>
-                </div>
-
-                <div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Petits groupes, attention personnalisée. Nos jumeaux adorent y aller!"</p>
-                    <div class="testimonial-author">Khady Ndiaye</div>
-                    <div class="testimonial-role">Maman de jumeaux</div>
-                </div>
-
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Témoignages</h2>
         </div>
+
+        <div class="testimonial-grid">
+          <div 
+            v-for="testimonial in testimonials" 
+            :key="testimonial.id"
+            class="testimonial-card"
+          >
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">{{ testimonial.text }}</p>
+            <div class="testimonial-author">{{ testimonial.author }}</div>
+            <div class="testimonial-role">{{ testimonial.role }}</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="final-grid">
-                <div>
-                    <h2>Rejoignez-nous</h2>
-                    <p>Réservez une visite et découvrez pourquoi les familles nous font confiance.</p>
-                    <a href="#contact" class="btn">Planifier une visite</a>
-                </div>
-                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1400&q=80" alt="Rejoignez-nous" class="feature-image">
-            </div>
+    <!-- CTA -->
+    <section id="contact" class="cta">
+      <div class="container">
+        <h2>Contactez-nous</h2>
+        <p>Demandez une inspection pour votre établissement et améliorez vos standards de qualité.</p>
+        <div class="contact-info">
+          <p>📍 Siège OFIECS, Dakar, Sénégal</p>
+          <p>📞 +221 33 XXX XXXX</p>
+          <p>✉️ contact@ofiecs.sn</p>
         </div>
+        <a href="#" class="btn">Nous contacter</a>
+      </div>
     </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Prêt à commencer?</h2>
-            
-            <div class="contact-info">
-                <p>📍 123 Avenue des Enfants, Dakar</p>
-                <p>📞 +221 33 123 4567</p>
-                <p>✉️ bonjour@littlelearners.sn</p>
-            </div>
-
-            <a href="#" class="btn btn-white">Nous contacter</a>
-        </div>
-    </section>
-
-</main>
+  </div>
 </template>
 
-<script setup>
-import { onMounted } from 'vue'
-definePageMeta({    
-  title: 'Little Learners - Crèche Agréée OFIECS à Dakar',
-  layout:'main',
-  meta: [
-    { name: 'description', content: "Découvrez Little Learners, une crèche agréée OFIECS à Dakar offrant un environnement sûr et stimulant pour les enfants de 6 mois à 5 ans. Réservez une visite aujourd'hui!" },
-    { name: 'keywords', content: 'crèche Dakar, OFIECS, garde d\'enfants, éducation petite enfance, programmes préscolaires, sécurité enfants, développement enfantin' },
-    { name: 'author', content: 'Little Learners' },
-  ],
-})
-onMounted(() => {
-  // Smooth scroll for in-page anchors
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href')
-      if (!href || href === '#') return
-      e.preventDefault()
-      const target = document.querySelector(href)
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    })
-  })
-})
+<script>
+import FeatureSection from '/components/FeatureSection.vue';
+import ProgramCard from '/components/ProgramCard.vue';
+
+export default {
+  name: 'HomePage',
+  components: {
+    FeatureSection,
+    ProgramCard
+  },
+  data() {
+    return {
+      programs: [
+        {
+          id: 1,
+          title: 'Qualité de l\'éducation',
+          description: 'Évaluation des programmes, méthodes pédagogiques et développement des compétences.',
+          image: 'https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&q=80',
+          ageRange: 'Domaine 1'
+        },
+        {
+          id: 2,
+          title: 'Protection et sécurité',
+          description: 'Sécurité physique, protection de l\'enfance, protocoles d\'urgence et hygiène.',
+          image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80',
+          ageRange: 'Domaine 2'
+        },
+        {
+          id: 3,
+          title: 'Leadership et gestion',
+          description: 'Efficacité de la direction, gouvernance, gestion des ressources et vision stratégique.',
+          image: 'https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=800&q=80',
+          ageRange: 'Domaine 3'
+        }
+      ],
+      testimonials: [
+        {
+          id: 1,
+          text: 'L\'inspection OFIECS nous a permis d\'identifier des axes d\'amélioration clairs. Rapport professionnel et constructif.',
+          author: 'Aminata Diallo',
+          role: 'Directrice, École Maternelle Les Bambins'
+        },
+        {
+          id: 2,
+          text: 'L\'accréditation OFIECS rassure les parents. Un gage de qualité et de transparence pour notre établissement.',
+          author: 'Moussa Sarr',
+          role: 'Directeur, Crèche Soleil Levant'
+        },
+        {
+          id: 3,
+          text: 'Inspecteurs compétents et objectifs. Les recommandations ont vraiment amélioré nos pratiques pédagogiques.',
+          author: 'Khady Ndiaye',
+          role: 'Responsable pédagogique, Garderie Arc-en-Ciel'
+        }
+      ]
+    }
+  },
+  methods: {
+    handleProgramClick(program) {
+      console.log('Program clicked:', program);
+      // Navigate to program detail or show modal
+      this.$router.push(`/programmes/${program.id}`);
+    }
+  }
+}
 </script>
 
-<!-- Keep styling minimal; project CSS + Tailwind handle most visuals -->
-<style>
-/* minor helpers to match original classes if needed */
-.btn { text-decoration: none }
-.hero-image { height: 320px }
-.feature-image { height: 260px }
+<style scoped>
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* HERO */
+.hero {
+  padding: 200px 0 120px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 12px 32px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero h1 {
+  font-size: 96px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  margin-bottom: 32px;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 28px;
+  font-weight: 300;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 24px 64px;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #d4af37;
+  color: #1e3a8a;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+  background: #b8930f;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px);
+}
+
+/* STATS */
+.stats {
+  padding: 200px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.stats-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 60px 40px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.08);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.stat-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 48px rgba(30, 58, 138, 0.15);
+  border-color: #2563eb;
+}
+
+.stat-icon {
+  font-size: 56px;
+  margin-bottom: 24px;
+  filter: grayscale(0.3);
+}
+
+.stat-number {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 20px;
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-description {
+  font-size: 16px;
+  color: #64748b;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* PROGRAMS */
+.programs {
+  padding: 200px 0;
+  background: #fafafa;
+}
+
+.section-header {
+  margin-bottom: 160px;
+}
+
+.section-header h2 {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 32px;
+  color: #000000;
+}
+
+.section-header p {
+  font-size: 28px;
+  font-weight: 300;
+  color: #666666;
+  max-width: 700px;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+/* FULL IMAGE */
+.full-image-section {
+  padding: 200px 0;
+}
+
+.full-image {
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 200px 0;
+  background: #fafafa;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.testimonial-stars {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.testimonial-text {
+  font-size: 24px;
+  font-weight: 300;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.testimonial-author {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.testimonial-role {
+  font-size: 16px;
+  color: #999999;
+}
+
+/* CTA */
+.cta {
+  padding: 200px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 48px;
+  color: #000000;
+}
+
+.cta p {
+  font-size: 32px;
+  font-weight: 300;
+  color: #666666;
+  margin-bottom: 60px;
+}
+
+.contact-info {
+  margin-bottom: 60px;
+}
+
+.contact-info p {
+  font-size: 24px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 48px;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .hero {
+    padding: 160px 0 100px;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 500px;
+  }
+
+  .stat-item {
+    padding: 40px 30px;
+  }
+
+  .stat-icon {
+    font-size: 48px;
+  }
+
+  .stat-number {
+    font-size: 64px;
+  }
+
+  .stat-label {
+    font-size: 18px;
+  }
+
+  .stat-description {
+    font-size: 15px;
+  }
+
+  .program-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .section-header h2,
+  .cta h2 {
+    font-size: 64px;
+  }
+
+  .full-image {
+    height: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .hero {
+    padding: 120px 0 80px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 10px 24px;
+    margin-bottom: 32px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 48px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 20px 48px;
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .stats,
+  .programs,
+  .full-image-section,
+  .testimonials,
+  .cta {
+    padding: 120px 0;
+  }
+
+  .stats-grid {
+    max-width: 100%;
+    gap: 32px;
+  }
+
+  .stat-item {
+    padding: 32px 24px;
+  }
+
+  .stat-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  .stat-number {
+    font-size: 56px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+  }
+
+  .stat-description {
+    font-size: 14px;
+  }
+
+  .section-header h2,
+  .cta h2 {
+    font-size: 48px;
+  }
+
+  .section-header p,
+  .cta p {
+    font-size: 20px;
+  }
+
+  .section-header {
+    margin-bottom: 80px;
+  }
+}
 </style>
