@@ -201,12 +201,12 @@
     <section class="split-image-section">
         <div class="split-container">
             <div class="split-content">
-                <h2>Excellence<br>Éducative</h2>
-                <p>Des standards élevés pour former la jeunesse sénégalaise aux défis du 21ème siècle.</p>
+                <h2>Excellence.<br>Par nature.</h2>
+                <p class="split-lead">Former la génération qui façonnera l'avenir du Sénégal.</p>
             </div>
             <div class="split-image">
                 <img 
-                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1400&q=80" 
+                    src="/home/pexels-max-fischer-5212329.jpg" 
                     alt="Étudiants en classe"
                 >
             </div>
@@ -356,8 +356,8 @@ export default {
 /* HERO */
 .hero {
   padding: 200px 0 120px;
-  background: linear-gradient(135deg, rgba(0, 33, 71, 0.9) 0%, rgba(0, 33, 71, 0.85) 100%), 
-              url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=2000&q=80');
+  background: linear-gradient(135deg, rgba(0, 33, 71, 0.503) 0%, rgba(0, 33, 71, 0.85) 100%), 
+              url('/home/hero.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -583,48 +583,61 @@ export default {
 
 /* SPLIT IMAGE SECTION */
 .split-image-section {
-  background: #000000;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
+  padding: 160px 0;
 }
 
 .split-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 700px;
+  gap: 80px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 64px;
 }
 
 .split-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 80px;
 }
 
 .split-content h2 {
-  font-size: 96px;
-  font-weight: 800;
-  letter-spacing: -4px;
-  margin-bottom: 32px;
-  color: #ffffff;
-  line-height: 1;
+  font-size: 88px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  margin-bottom: 24px;
+  color: #000000;
+  line-height: 0.95;
 }
 
-.split-content p {
-  font-size: 28px;
-  font-weight: 300;
-  color: #a1a1a6;
-  line-height: 1.4;
+.split-lead {
+  font-size: 24px;
+  font-weight: 400;
+  color: #6e6e73;
+  line-height: 1.5;
+  max-width: 480px;
 }
 
 .split-image {
   position: relative;
   overflow: hidden;
+  border-radius: 24px;
 }
 
 .split-image img {
   width: 100%;
-  height: 100%;
+  height: 600px;
   object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.split-image-section:hover .split-image img {
+  transform: scale(1.02);
 }
 
 /* FULL WIDTH IMAGE */
@@ -644,7 +657,7 @@ export default {
 /* DOMAINS */
 .domains-section {
   padding: 200px 0;
-  background: #ffffff;
+  background: #fafafa;
 }
 
 .domains-section h2 {
@@ -725,7 +738,7 @@ export default {
 /* CERTIFICATION */
 .certification-section {
   padding: 200px 0;
-  background: #fafafa;
+  background: #ffffff;
 }
 
 .certification-section h2 {
@@ -842,15 +855,18 @@ export default {
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 40px;
   margin-top: 160px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .price-card {
-  padding: 60px 48px;
-  background: #fafafa;
-  border-radius: 32px;
-  border: none;
+  padding: 48px 40px;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e5e5e7;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -858,23 +874,24 @@ export default {
 .price-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-color: #d2d2d7;
 }
 
 .price-featured {
-  border: none;
-  background: #000000;
+  border: 2px solid #000000;
+  background: #ffffff;
   transform: scale(1);
-  color: #ffffff;
+  color: #000000;
 }
 
 .price-featured h3,
 .price-featured .price,
 .price-featured li {
-  color: #ffffff;
+  color: #000000;
 }
 
 .price-featured .price-detail {
-  color: #a1a1a6;
+  color: #6e6e73;
 }
 
 .featured-badge {
@@ -883,11 +900,13 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   padding: 8px 24px;
-  background: #ffffff;
-  color: #000000;
-  font-size: 14px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 12px;
   font-weight: 700;
   border-radius: 100px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .price-card h3 {
@@ -942,87 +961,90 @@ export default {
 .btn-outline {
   display: block;
   width: 100%;
-  padding: 18px;
+  padding: 16px;
   text-align: center;
   text-decoration: none;
   border-radius: 100px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background: #000000;
+  background: #0071e3;
   color: #ffffff;
+  border: none;
 }
 
 .btn-primary:hover {
-  background: #1d1d1f;
+  background: #0077ed;
   transform: translateY(-2px);
 }
 
 .btn-outline {
   background: transparent;
-  color: #000000;
-  border: 2px solid #d2d2d7;
+  color: #0071e3;
+  border: 2px solid #0071e3;
 }
 
 .btn-outline:hover {
-  background: #000000;
+  background: #0071e3;
   color: #ffffff;
-  border-color: #000000;
 }
 
 .price-featured .btn-primary {
-  background: #ffffff;
-  color: #000000;
+  background: #000000;
+  color: #ffffff;
 }
 
 .price-featured .btn-primary:hover {
-  background: #f5f5f7;
+  background: #1d1d1f;
 }
 
 /* CTA */
 .cta {
-  padding: 200px 0;
+  padding: 160px 0;
   text-align: center;
-  background: #000000;
-  color: #ffffff;
+  background: #f5f5f7;
+  color: #000000;
 }
 
 .cta h2 {
-  font-size: 96px;
-  font-weight: 800;
+  font-size: 80px;
+  font-weight: 700;
   letter-spacing: -3px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  color: #000000;
 }
 
 .cta p {
-  font-size: 28px;
-  font-weight: 300;
-  margin-bottom: 60px;
-  max-width: 700px;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 48px;
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.4;
-  color: #a1a1a6;
+  line-height: 1.5;
+  color: #6e6e73;
 }
 
 .btn-cta {
   display: inline-block;
-  padding: 20px 64px;
-  background: #ffffff;
-  color: #000000;
+  padding: 16px 48px;
+  background: #0071e3;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 100px;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .btn-cta:hover {
-  background: #f5f5f7;
+  background: #0077ed;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.3);
 }
 
 /* RESPONSIVE */
@@ -1084,27 +1106,33 @@ export default {
     font-size: 22px;
   }
 
-  .split-container {
-    grid-template-columns: 1fr;
-    min-height: auto;
+  .split-image-section {
+    padding: 120px 0;
   }
 
-  .split-content {
-    padding: 80px 40px;
+  .split-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 0 40px;
   }
 
   .split-content h2 {
     font-size: 64px;
   }
 
-  .split-content p {
-    font-size: 22px;
+  .split-lead {
+    font-size: 20px;
   }
 
-  .split-image {
-    min-height: 400px;
+  .split-image img {
+    height: 500px;
   }
-}
+  }
+
+  .split-image img {
+    filter: grayscale(0%);
+  }
+
 
 @media (max-width: 640px) {
   .container {
@@ -1171,24 +1199,27 @@ export default {
     font-size: 16px;
   }
 
-  .split-content {
-    padding: 60px 24px;
+  .split-image-section {
+    padding: 80px 0;
+  }
+
+  .split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 24px;
   }
 
   .split-content h2 {
-    font-size: 40px;
+    font-size: 48px;
+    letter-spacing: -2px;
   }
 
-  .split-content p {
+  .split-lead {
     font-size: 18px;
   }
 
-  .split-image {
-    min-height: 350px;
-    border-radius: 18px;
-  }
-
   .split-image img {
+    height: 400px;
     border-radius: 18px;
   }
 

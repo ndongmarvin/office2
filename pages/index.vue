@@ -37,7 +37,7 @@
     <FeatureSection
       title="Inspections rigoureuses"
       description="Évaluation complète de la qualité de l'éducation, de la sécurité et du bien-être des enfants. Méthodologie éprouvée et transparente."
-      image-src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=1400&q=80"
+      image-src="/home/rapport.jpg"
       image-alt="Inspection OFIECS"
       :features="[
         'Évaluation complète et objective',
@@ -99,11 +99,32 @@
     <!-- FULL WIDTH IMAGE -->
     <section class="full-image-section">
       <div class="container">
-        <img 
-          src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=2000&q=80" 
-          alt="Inspection OFIECS" 
+        <img
+        src="/home/full-kids.jpg"
+     alt="Inspection OFIECS" 
           class="full-image"
         >
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="partners-section">
+      <div class="container">
+        <div class="partners-content">
+          <h2>Collaboration internationale</h2>
+          <p>L'OFIECS collabore avec le Ministère de l'Éducation Nationale du Sénégal ainsi qu'à des partenaires internationaux tels que l'UNESCO et l'UNICEF pour garantir des standards d'excellence éducative alignés sur les meilleures pratiques mondiales.</p>
+          <div class="partners-logos">
+            <div class="partner-logo">
+              <img src="/partners/unesco.png" alt="UNESCO" />
+            </div>
+            <div class="partner-logo">
+              <img src="/partners/unicef.png" alt="UNICEF" />
+            </div>
+            <div class="partner-logo">
+              <img src="/partners/sn.png" alt="Ministère de l'Éducation Sénégal" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -162,7 +183,7 @@ export default {
           id: 1,
           title: 'Qualité de l\'éducation',
           description: 'Évaluation des programmes, méthodes pédagogiques et développement des compétences.',
-          image: 'https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&q=80',
+          image: '/home/pexels-rdne-8500302.jpg',
           ageRange: 'Domaine 1'
         },
         {
@@ -222,8 +243,8 @@ export default {
 /* HERO */
 .hero {
   padding: 200px 0 120px;
-  background: linear-gradient(135deg, rgba(0, 33, 71, 0.9) 0%, rgba(0, 33, 71, 0.85) 100%), 
-              url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=2000&q=80');
+  background: linear-gradient(135deg, rgba(0, 33, 71, 0.503) 0%, rgba(0, 33, 71, 0.85) 100%), 
+              url('/home/hero.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -395,6 +416,61 @@ export default {
   height: 900px;
   object-fit: cover;
   border-radius: 32px;
+}
+
+/* PARTNERS */
+.partners-section {
+  padding: 160px 0;
+  background: #fafafa;
+}
+
+.partners-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partners-content h2 {
+  font-size: 88px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 0.95;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.partners-content p {
+  font-size: 28px;
+  font-weight: 400;
+  color: #6e6e73;
+  line-height: 1.4;
+  max-width: 960px;
+  margin: 0 auto 96px;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  flex-wrap: wrap;
+  padding: 64px 0;
+  background: #ffffff;
+  border-radius: 32px;
+}
+
+.partner-logo {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.partner-logo:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+.partner-logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* TESTIMONIALS */
@@ -622,6 +698,30 @@ export default {
   .section-header p,
   .cta p {
     font-size: 20px;
+  }
+
+  .partners-section {
+    padding: 100px 0;
+  }
+
+  .partners-content h2 {
+    font-size: 56px;
+    letter-spacing: -2px;
+  }
+
+  .partners-content p {
+    font-size: 21px;
+    margin-bottom: 64px;
+  }
+
+  .partners-logos {
+    gap: 64px;
+    padding: 48px 32px;
+    border-radius: 24px;
+  }
+
+  .partner-logo img {
+    height: 64px;
   }
 
   .section-header {

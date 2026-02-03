@@ -317,8 +317,8 @@ export default {
 /* HERO */
 .hero {
   padding: 240px 0 120px;
-  background: linear-gradient(135deg, rgba(0, 33, 71, 0.9) 0%, rgba(0, 33, 71, 0.85) 100%), 
-              url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=2000&q=80');
+  background: linear-gradient(135deg, rgba(0, 33, 71, 0.503) 0%, rgba(0, 33, 71, 0.85) 100%), 
+              url('/home/hero.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
