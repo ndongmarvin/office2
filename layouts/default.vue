@@ -78,18 +78,7 @@
             </div>
           </div>
 
-          <!-- Column 2: Liens Rapides -->
-          <div class="footer-column">
-            <h3 class="footer-title">Navigation</h3>
-            <ul class="footer-list">
-              <li><router-link to="/">Accueil</router-link></li>
-              <li><router-link to="/about">À propos</router-link></li>
-              <li><router-link to="/inspections">Inspections</router-link></li>
-              <li><router-link to="/contact">Contact</router-link></li>
-            </ul>
-          </div>
-
-          <!-- Column 3: Contact -->
+          <!-- Column 2: Contact -->
           <div class="footer-column">
             <h3 class="footer-title">Contact</h3>
             <ul class="footer-list footer-contact">
@@ -396,8 +385,8 @@ export default {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
   padding-bottom: 60px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -560,6 +549,37 @@ export default {
   }
 }
 
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-about {
+    text-align: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 20px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-list {
+    align-items: center;
+  }
+
+  .footer-contact li {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 640px) {
   .container {
     padding: 0 24px;
@@ -603,27 +623,76 @@ export default {
   }
 
   .footer {
-    padding: 60px 0 0;
+    padding: 48px 0 0;
   }
 
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding-bottom: 40px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
   }
 
   .footer-about {
-    grid-column: 1 / -1;
+    grid-column: 1;
     max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  /* Hide contact column on mobile */
+  .footer-column:not(.footer-about) {
+    display: none;
   }
 
   .footer-logo {
     height: 50px;
+    width: auto;
+    margin: 0 auto 16px;
+  }
+
+  .footer-description {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    padding: 0 10px;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-link svg {
+    width: 20px;
+    height: 20px;
   }
 
   .footer-bottom {
-    gap: 16px;
+    gap: 8px;
     padding: 24px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  .footer-legal-links {
+    font-size: 11px;
+  }
+
+  .footer-legal-links .separator {
+    margin: 0 8px;
   }
 }
 </style>
