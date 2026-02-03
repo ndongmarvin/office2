@@ -65,6 +65,57 @@
       </div>
     </section>
 
+    <!-- METHODS SECTION -->
+    <section class="methods-section">
+      <div class="container">
+        <h2 class="methods-title">Excellence par la méthode</h2>
+        <p class="methods-lead">Une approche rigoureuse et éprouvée pour garantir la qualité éducative</p>
+        <div class="methods-grid">
+          <div class="method-card">
+            <a href="/inspections" class="method-link">
+              <img src="/home/pexels-rdne-8500302.jpg" alt="Observation en classe" class="method-image">
+              <p class="method-subtitle">Observation en classe</p>
+            </a>
+          </div>
+
+          <div class="method-card">
+            <a href="/inspections" class="method-link">
+              <img src="/home/pexels-max-fischer-5212345.jpg" alt="Entretiens approfondis" class="method-image">
+              <p class="method-subtitle">Entretiens approfondis</p>
+            </a>
+          </div>
+
+          <div class="method-card">
+            <a href="/inspections" class="method-link">
+              <img src="/home/rapport.jpg" alt="Analyse des données" class="method-image">
+              <p class="method-subtitle">Analyse des données</p>
+            </a>
+          </div>
+
+          <div class="method-card">
+            <a href="/inspections" class="method-link">
+              <img src="/home/pexels-cottonbro-8369218.jpg" alt="Évaluation des pratiques" class="method-image">
+              <p class="method-subtitle">Évaluation des pratiques</p>
+            </a>
+          </div>
+
+          <div class="method-card">
+            <a href="/inspections" class="method-link">
+              <img src="/home/pexels-cottonbro-8370966.jpg" alt="Audit des infrastructures" class="method-image">
+              <p class="method-subtitle">Audit des infrastructures</p>
+            </a>
+          </div>
+
+          <div class="method-card">
+            <a href="/inspections" class="method-link">
+              <img src="/home/pexels-rdne-8500309.jpg" alt="Recommandations stratégiques" class="method-image">
+              <p class="method-subtitle">Recommandations stratégiques</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FEATURES --> 
     <FeatureSection
       title="Inspections rigoureuses"
@@ -391,7 +442,7 @@ export default {
 
 .stat-number {
   font-size: 96px;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -4px;
   margin-bottom: 16px;
   color: #ffffff;
@@ -421,7 +472,7 @@ export default {
 
 .structure-content h2 {
   font-size: 80px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1;
   letter-spacing: -3px;
   margin-bottom: 32px;
@@ -476,6 +527,89 @@ export default {
   color: #6e6e73;
   line-height: 1.5;
   font-weight: 400;
+}
+
+/* METHODS SECTION */
+.methods-section {
+  padding: 160px 0;
+  background: #f5f5f1;
+}
+
+.methods-title {
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -3px;
+  margin-bottom: 32px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.methods-lead {
+  font-size: 28px;
+  font-weight: 300;
+  color: #4d4d4d;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 96px;
+  line-height: 1.4;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.method-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.method-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+}
+
+.method-link {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.method-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.method-card:hover .method-image {
+  transform: scale(1.05);
+}
+
+.method-subtitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 48px 24px 24px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.method-card:hover .method-subtitle {
+  background: linear-gradient(to top, rgba(0, 111, 183, 0.9) 0%, rgba(0, 111, 183, 0) 100%);
 }
 
 /* PROGRAMS */
@@ -746,6 +880,34 @@ export default {
 
   .structure-card p {
     font-size: 16px;
+  }
+
+  .methods-section {
+    padding: 100px 0;
+  }
+
+  .methods-title {
+    font-size: 56px;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+  }
+
+  .methods-lead {
+    font-size: 21px;
+    margin-bottom: 64px;
+  }
+
+  .methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .method-image {
+    height: 250px;
+  }
+
+  .method-subtitle {
+    font-size: 19px;
   }
 
   .program-grid,
