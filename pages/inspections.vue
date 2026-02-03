@@ -4,7 +4,7 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">📋 Processus d'Inspection</div>
+            <div class="hero-badge"> Processus d'Inspection</div>
             <h1>Inspections OFIECS</h1>
             <p>Découvrez notre processus d'inspection rigoureux et transparent, conçu pour garantir l'excellence éducative dans tous les établissements du Sénégal.</p>
         </div>
@@ -356,9 +356,14 @@ export default {
 /* HERO */
 .hero {
   padding: 200px 0 120px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  background: linear-gradient(135deg, rgba(0, 33, 71, 0.9) 0%, rgba(0, 33, 71, 0.85) 100%), 
+              url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   text-align: center;
   color: #ffffff;
+  position: relative;
 }
 
 .hero-badge {
@@ -519,6 +524,10 @@ export default {
   background: #ffffff;
 }
 
+.visual-section .container {
+  padding: 0 64px;
+}
+
 .visual-image {
   width: 100%;
   height: 700px;
@@ -621,19 +630,15 @@ export default {
 /* FULL WIDTH IMAGE */
 .full-width-image {
   width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  position: relative;
-  overflow: hidden;
+  padding: 0 64px;
+  margin: 120px 0;
 }
 
 .full-width-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 700px;
   object-fit: cover;
+  border-radius: 32px;
 }
 
 /* DOMAINS */

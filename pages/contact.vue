@@ -4,7 +4,7 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">✉️ Contactez-nous</div>
+            <div class="hero-badge"> Contactez-nous</div>
             <h1>Contact OFIECS</h1>
             <p>Notre équipe est à votre disposition pour répondre à vos questions et planifier votre inspection.</p>
         </div>
@@ -377,9 +377,14 @@ export default {
 /* HERO */
 .hero {
   padding: 240px 0 120px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  background: linear-gradient(135deg, rgba(0, 33, 71, 0.9) 0%, rgba(0, 33, 71, 0.85) 100%), 
+              url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   text-align: center;
   color: #ffffff;
+  position: relative;
 }
 
 .hero-badge {

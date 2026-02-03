@@ -317,9 +317,14 @@ export default {
 /* HERO */
 .hero {
   padding: 240px 0 120px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  background: linear-gradient(135deg, rgba(0, 33, 71, 0.9) 0%, rgba(0, 33, 71, 0.85) 100%), 
+              url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   text-align: center;
   color: #ffffff;
+  position: relative;
 }
 
 .hero-badge {
@@ -574,28 +579,48 @@ export default {
 /* STATS BANNER */
 .stats-banner {
   padding: 120px 0;
-  background: #000000;
+  background: #002147; /* Même couleur que les autres sections sombres */
 }
 
 .stats-banner .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 80px;
+  gap: 0;
   text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.stats-banner .stats-grid > div {
+  padding: 80px 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stats-banner .stats-grid > div:last-child {
+  border-right: none;
+}
+
+.stats-banner .stats-grid > div:hover {
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .stat-number {
   font-size: 96px;
   font-weight: 700;
-  letter-spacing: -3px;
+  letter-spacing: -4px;
   margin-bottom: 16px;
   color: #ffffff;
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: 17px;
+  font-size: 21px;
   color: #a1a1a6;
   font-weight: 400;
+  line-height: 1.4;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 /* TEAM */
@@ -886,11 +911,30 @@ export default {
 
   .stats-banner .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 0;
+  }
+
+  .stats-banner .stats-grid > div {
+    padding: 60px 30px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stats-banner .stats-grid > div:nth-child(2n) {
+    border-right: none;
+  }
+
+  .stats-banner .stats-grid > div:nth-last-child(-n+2) {
+    border-bottom: none;
   }
 
   .stat-number {
     font-size: 72px;
+    letter-spacing: -3px;
+  }
+
+  .stat-label {
+    font-size: 19px;
   }
 
   .cert-grid {
@@ -975,13 +1019,28 @@ export default {
     border-radius: 24px;
   }
 
-  .stat-number {
-    font-size: 56px;
-  }
-
   .stats-banner .stats-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 0;
+  }
+
+  .stats-banner .stats-grid > div {
+    padding: 32px 24px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stats-banner .stats-grid > div:last-child {
+    border-bottom: none;
+  }
+
+  .stat-number {
+    font-size: 64px;
+    letter-spacing: -2px;
+  }
+
+  .stat-label {
+    font-size: 17px;
   }
 
   .cta h2 {
