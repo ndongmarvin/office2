@@ -33,6 +33,38 @@
       </div>
     </section>
 
+    <!-- STRUCTURE -->
+    <section class="structure-section">
+      <div class="container">
+        <div class="structure-content">
+          <h2>Une structure dédiée à l'excellence</h2>
+          <p>L'OFIECS regroupe des inspecteurs d'État et des experts en éducation pour garantir la qualité de l'enseignement au Sénégal.</p>
+        </div>
+        <div class="structure-grid">
+          <div class="structure-card">
+            <div class="structure-icon">👨‍💼</div>
+            <h3>Direction Générale</h3>
+            <p>Coordination stratégique et pilotage des inspections nationales</p>
+          </div>
+          <div class="structure-card">
+            <div class="structure-icon">🎓</div>
+            <h3>Inspecteurs Pédagogiques</h3>
+            <p>Évaluation de la qualité de l'enseignement et des pratiques éducatives</p>
+          </div>
+          <div class="structure-card">
+            <div class="structure-icon">🏛️</div>
+            <h3>Inspecteurs Administratifs</h3>
+            <p>Contrôle de la gestion et de la conformité réglementaire</p>
+          </div>
+          <div class="structure-card">
+            <div class="structure-icon">👶</div>
+            <h3>Service Petite Enfance</h3>
+            <p>Protection et bien-être des enfants dans les structures d'accueil</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FEATURES -->
     <FeatureSection
       title="Inspections rigoureuses"
@@ -375,6 +407,77 @@ export default {
   margin: 0 auto;
 }
 
+/* STRUCTURE */
+.structure-section {
+  padding: 160px 0;
+  background: #ffffff;
+}
+
+.structure-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 96px;
+}
+
+.structure-content h2 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -3px;
+  margin-bottom: 32px;
+  color: #1e3a8a;
+}
+
+.structure-content p {
+  font-size: 24px;
+  color: #6e6e73;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.structure-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.structure-card {
+  background: #fafafa;
+  padding: 48px 32px;
+  border-radius: 24px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.structure-card:hover {
+  background: #f5f5f7;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+}
+
+.structure-icon {
+  font-size: 72px;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+.structure-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.structure-card p {
+  font-size: 17px;
+  color: #6e6e73;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
 /* PROGRAMS */
 .programs {
   padding: 200px 0;
@@ -609,6 +712,40 @@ export default {
 
   .stat-label {
     font-size: 19px;
+  }
+
+  .structure-section {
+    padding: 100px 0;
+  }
+
+  .structure-content h2 {
+    font-size: 56px;
+    letter-spacing: -2px;
+  }
+
+  .structure-content p {
+    font-size: 21px;
+  }
+
+  .structure-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .structure-card {
+    padding: 40px 24px;
+  }
+
+  .structure-icon {
+    font-size: 64px;
+  }
+
+  .structure-card h3 {
+    font-size: 21px;
+  }
+
+  .structure-card p {
+    font-size: 16px;
   }
 
   .program-grid,

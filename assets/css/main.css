@@ -5,12 +5,50 @@
    Keep this file minimal — put app-specific overrides here.
 */
 
-/* Variables CSS - Palette institutionnelle OFIECS */
+/* Variables CSS - Palette UN/HR Institutionnelle */
 :root {
   /* Largeur max du contenu */
   --content-max-width: 1200px;
   
-  /* Palette Bleu Marine Institutionnel */
+  /* Palette UN/HR */
+  --hr-blue: #006fb7;
+  --neutral: #f5f5f1;
+  --black: #000000;
+  --green: #26a465;
+  --red: #df2626;
+  --forest-green: #004940;
+  --sand: #c6bd99;
+  --earth: #6c3928;
+  --water: #55c8ff;
+  --white: #ffffff;
+  --charcoal: #4a4a4a;
+  --orange: #faa31b;
+  --un-blue: #009edb;
+  --nightrider: #333333;
+  --whitesmoke: #f2f2f2;
+  --gray: #4d4d4d;
+  --smoke-gray: #d9d9d9;
+  --un-dark-gray: #333;
+  --texture-blue: #0070b7;
+  --silver: #c4c4c4;
+  --whishper-gray: #e7e6e6;
+  --text-gray: #d9d9cc;
+  --gainsboro: #e0e0e0;
+  --text-blue: #0360ab;
+  --light-grey: #fafaf8;
+  --border-grey: #ededed;
+  --light-black: #1a1a1a;
+  --button-hover: #fcfcfa;
+  --button-hover-light: #e9e9dd;
+  --button-blue-focus: #3ab2ff;
+  --button-border-active: #a6a6a6;
+  --button-background-active: #dfdfd9;
+  --button-background-image-active: #f6f6f3;
+  --button-background-image-active-other: #e7e7df;
+  --dialog-background: #6b6b6b;
+  --dialog-content-background: #f5f5f2;
+  
+  /* Palette Bleu Marine Institutionnel (legacy - kept for compatibility) */
   --primary-50: #eff6ff;
   --primary-100: #dbeafe;
   --primary-200: #bfdbfe;
