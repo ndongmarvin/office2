@@ -50,36 +50,62 @@
     <section id="mission" class="values">
         <div class="container">
             <h2>Nos Domaines d'Inspection</h2>
+            <p class="values-lead">Cinq piliers fondamentaux pour garantir l'excellence éducative</p>
             <div class="values-grid">
                 
                 <div class="value-item">
-                    <div class="domain-number">1</div>
-                    <h3>Qualité de l'Éducation</h3>
-                    <p>Programmes pédagogiques, compétences des enseignants, méthodes d'enseignement et développement des compétences.</p>
+                    <div class="domain-image-container">
+                        <img src="/home/pexels-rdne-8500302.jpg" alt="Qualité de l'Éducation" class="domain-image">
+                        <div class="domain-overlay">
+                            <div class="domain-number">1</div>
+                            <h3>Qualité de l'Éducation</h3>
+                        </div>
+                    </div>
+                    <p class="domain-description">Programmes pédagogiques, compétences des enseignants, méthodes d'enseignement et développement des compétences.</p>
                 </div>
 
                 <div class="value-item">
-                    <div class="domain-number">2</div>
-                    <h3>Protection et Sécurité</h3>
-                    <p>Sécurité physique, protection de l'enfance, protocoles d'urgence, hygiène et conformité des infrastructures.</p>
+                    <div class="domain-image-container">
+                        <img src="/home/pexels-cottonbro-8370966.jpg" alt="Protection et Sécurité" class="domain-image">
+                        <div class="domain-overlay">
+                            <div class="domain-number">2</div>
+                            <h3>Protection et Sécurité</h3>
+                        </div>
+                    </div>
+                    <p class="domain-description">Sécurité physique, protection de l'enfance, protocoles d'urgence, hygiène et conformité des infrastructures.</p>
                 </div>
 
                 <div class="value-item">
-                    <div class="domain-number">3</div>
-                    <h3>Leadership et Gestion</h3>
-                    <p>Efficacité de la direction, gouvernance, gestion financière et des ressources humaines, vision stratégique.</p>
+                    <div class="domain-image-container">
+                        <img src="/home/pexels-max-fischer-5212345.jpg" alt="Leadership et Gestion" class="domain-image">
+                        <div class="domain-overlay">
+                            <div class="domain-number">3</div>
+                            <h3>Leadership et Gestion</h3>
+                        </div>
+                    </div>
+                    <p class="domain-description">Efficacité de la direction, gouvernance, gestion financière et des ressources humaines, vision stratégique.</p>
                 </div>
 
                 <div class="value-item">
-                    <div class="domain-number">4</div>
-                    <h3>Environnement d'Apprentissage</h3>
-                    <p>Qualité des installations, ressources pédagogiques, accessibilité et climat scolaire positif.</p>
+                    <div class="domain-image-container">
+                        <img src="/home/pexels-cottonbro-8369218.jpg" alt="Environnement d'Apprentissage" class="domain-image">
+                        <div class="domain-overlay">
+                            <div class="domain-number">4</div>
+                            <h3>Environnement d'Apprentissage</h3>
+                        </div>
+                    </div>
+                    <p class="domain-description">Qualité des installations, ressources pédagogiques, accessibilité et climat scolaire positif.</p>
                 </div>
 
                 <div class="value-item">
-                    <div class="domain-number">5</div>
-                    <h3>Engagement Communautaire</h3>
-                    <p>Relations avec les parents, partenariats locaux, contribution au développement communautaire.</p>
+                    <div class="domain-image-container">
+                        <img src="/home/pexels-rdne-8500309.jpg" alt="Engagement Communautaire" class="domain-image">
+                        <div class="domain-overlay">
+                            <div class="domain-number">5</div>
+                            <h3>Engagement Communautaire</h3>
+                        </div>
+                    </div>
+                    <p class="domain-description">Relations avec les parents, partenariats locaux, contribution au développement communautaire.</p>
                 </div>
 
             </div>
@@ -451,64 +477,114 @@ export default {
 /* VALUES */
 .values {
   padding: 200px 0;
-  background: #fafafa;
+  background: #f5f5f1;
 }
 
 .values h2 {
   font-size: 96px;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -3px;
-  margin-bottom: 120px;
+  margin-bottom: 32px;
   color: #1e3a8a;
   text-align: center;
+}
+
+.values-lead {
+  font-size: 28px;
+  font-weight: 300;
+  color: #4d4d4d;
+  text-align: center;
+  margin: 0 auto 80px;
+  max-width: 800px;
+  line-height: 1.4;
 }
 
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 1200px;
+  gap: 48px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .value-item {
-  text-align: center;
-  padding: 60px 40px;
-  background: transparent;
-  border-radius: 0;
-  box-shadow: none;
-  transition: all 0.3s ease;
-  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background: #ffffff;
 }
 
 .value-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+}
+
+.domain-image-container {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.domain-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.value-item:hover .domain-image {
+  transform: scale(1.05);
+}
+
+.domain-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: background 0.4s ease;
+}
+
+.value-item:hover .domain-overlay {
+  background: linear-gradient(to top, rgba(0, 111, 183, 0.95) 0%, rgba(0, 111, 183, 0.5) 100%);
 }
 
 .domain-number {
   display: inline-block;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  background: #000000;
-  color: #ffffff;
-  font-size: 40px;
-  font-weight: 700;
-  border-radius: 50%;
-  margin-bottom: 32px;
-}
-
-.value-item h3 {
-  font-size: 28px;
-  font-weight: 600;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  background: #ffffff;
   color: #000000;
-  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 900;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-.value-item p {
-  font-size: 17px;
+.value-item:hover .domain-number {
+  background: #006fb7;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.domain-overlay h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.domain-description {
+  padding: 24px;
+  font-size: 16px;
   color: #6e6e73;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -895,6 +971,15 @@ export default {
     gap: 40px;
   }
 
+  .domain-image-container {
+    height: 280px;
+  }
+
+  .values-lead {
+    font-size: 21px;
+    margin-bottom: 60px;
+  }
+
   .split-grid {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -997,6 +1082,41 @@ export default {
     font-size: 48px;
     margin-bottom: 60px;
     letter-spacing: -1.5px;
+  }
+
+  .values-lead {
+    font-size: 17px;
+    margin-bottom: 48px;
+  }
+
+  .domain-image-container {
+    height: 240px;
+  }
+
+  .domain-overlay {
+    padding: 24px 20px;
+  }
+
+  .domain-number {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .domain-overlay h3 {
+    font-size: 20px;
+  }
+
+  .domain-description {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .lead {
