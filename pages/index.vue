@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <!-- FEATURES -->
+    <!-- FEATURES --> 
     <FeatureSection
       title="Inspections rigoureuses"
       description="Évaluation complète de la qualité de l'éducation, de la sécurité et du bien-être des enfants. Méthodologie éprouvée et transparente."
