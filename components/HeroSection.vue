@@ -88,7 +88,7 @@ export default {
 .btn {
   background: #000000; /* Noir simple */
   color: #ffffff;
-  border-radius: 100px; /* Apple style */
+  border-radius: 100px; /*  style */
   /* Minimal, sobre, professionnel */
 }
 
@@ -105,7 +105,7 @@ export default {
 .btn {
   background: #000000; /* Noir simple */
   color: #ffffff;
-  border-radius: 100px; /* Apple style */
+  border-radius: 100px; /*  style */
   /* Minimal, sobre, professionnel */
 }
 </style>
