@@ -88,7 +88,7 @@
         }
 
         /* NAVIGATION */
-        nav {
+        /* nav {
             position: fixed;
             top: 0;
             width: 100%;
@@ -131,7 +131,7 @@
 
         nav a:hover {
             color: #000000;
-        }
+        } */
 
         /* HERO */
         .hero {
@@ -503,7 +503,14 @@
         .footer-links a:hover {
             color: #000000;
         }
-
+h2 {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-bottom: 48px;
+  color: #1e3a8a;
+  text-align: center;
+}
         /* RESPONSIVE */
         @media (max-width: 1024px) {
             .container {
@@ -552,9 +559,7 @@
                 height: 500px;
             }
 
-            nav ul {
-                display: none;
-            }
+            
         }
 
         @media (max-width: 640px) {

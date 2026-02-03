@@ -3,39 +3,31 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">🏛️ Institution Publique</div>
+            <!-- <div class="hero-badge">🏛️ Institution Publique</div> -->
             <h1>OFIECS — Office d'Inspection de l'Éducation</h1>
             <p>Garantir l'excellence éducative au Sénégal par l'inspection rigoureuse des établissements d'enseignement et des services à l'enfance.</p>
-            <div class="hero-actions">
+            <!-- <div class="hero-actions">
                 <a href="#contact" class="btn-primary">Demander une inspection</a>
                 <a href="/about" class="btn-secondary">En savoir plus</a>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <!-- STATS -->
     <section class="stats">
       <div class="container">
-        <div class="stats-wrapper">
-          <div class="stats-grid">
-            <div class="stat-item">
-              <div class="stat-icon">📊</div>
-              <div class="stat-number">20+</div>
-              <div class="stat-label">Inspecteurs qualifiés</div>
-              <div class="stat-description">Professionnels certifiés et expérimentés</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">🏫</div>
-              <div class="stat-number">150+</div>
-              <div class="stat-label">Établissements inspectés</div>
-              <div class="stat-description">Dans toutes les régions du Sénégal</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">✓</div>
-              <div class="stat-number">99%</div>
-              <div class="stat-label">Taux de conformité</div>
-              <div class="stat-description">Objectif de couverture 2026</div>
-            </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Inspecteurs qualifiés</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Établissements inspectés</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">99%</div>
+            <div class="stat-label">Taux de conformité</div>
           </div>
         </div>
       </div>
@@ -230,9 +222,14 @@ export default {
 /* HERO */
 .hero {
   padding: 200px 0 120px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  background: linear-gradient(135deg, rgba(0, 33, 71, 0.9) 0%, rgba(0, 33, 71, 0.85) 100%), 
+              url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   text-align: center;
   color: #ffffff;
+  position: relative;
 }
 
 .hero-badge {
@@ -312,71 +309,49 @@ export default {
 
 /* STATS */
 .stats {
-  padding: 200px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-}
-
-.stats-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 120px 0;
+  background: #002147;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
-  max-width: 1200px;
+  gap: 0;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .stat-item {
   text-align: center;
-  padding: 60px 40px;
-  background: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.08);
-  transition: all 0.4s ease;
-  border: 2px solid transparent;
+  padding: 80px 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-item:last-child {
+  border-right: none;
 }
 
 .stat-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 48px rgba(30, 58, 138, 0.15);
-  border-color: #2563eb;
-}
-
-.stat-icon {
-  font-size: 56px;
-  margin-bottom: 24px;
-  filter: grayscale(0.3);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .stat-number {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -3px;
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: -4px;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: 20px;
-  color: #1e3a8a;
-  font-weight: 600;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.stat-description {
-  font-size: 16px;
-  color: #64748b;
+  font-size: 21px;
+  color: #a1a1a6;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.4;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 /* PROGRAMS */
@@ -394,7 +369,7 @@ export default {
   font-weight: 800;
   letter-spacing: -2px;
   margin-bottom: 32px;
-  color: #000000;
+  color: #1e3a8a;
 }
 
 .section-header p {
@@ -471,7 +446,7 @@ export default {
   font-weight: 800;
   letter-spacing: -2px;
   margin-bottom: 48px;
-  color: #000000;
+  color: #1e3a8a;
 }
 
 .cta p {
@@ -538,28 +513,26 @@ export default {
 
   .stats-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-    max-width: 500px;
+    gap: 0;
   }
 
   .stat-item {
-    padding: 40px 30px;
+    padding: 60px 30px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .stat-icon {
-    font-size: 48px;
+  .stat-item:last-child {
+    border-bottom: none;
   }
 
   .stat-number {
-    font-size: 64px;
+    font-size: 72px;
+    letter-spacing: -3px;
   }
 
   .stat-label {
-    font-size: 18px;
-  }
-
-  .stat-description {
-    font-size: 15px;
+    font-size: 19px;
   }
 
   .program-grid,
@@ -633,15 +606,12 @@ export default {
   }
 
   .stat-number {
-    font-size: 56px;
+    font-size: 64px;
+    letter-spacing: -2px;
   }
 
   .stat-label {
-    font-size: 16px;
-  }
-
-  .stat-description {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .section-header h2,

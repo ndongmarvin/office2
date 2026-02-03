@@ -4,7 +4,7 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">🏛️ Institution Publique</div>
+            <!-- <div class="hero-badge">🏛️ Institution Publique</div> -->
             <h1>À Propos</h1>
             <p>Garantir l'excellence éducative au Sénégal par l'inspection rigoureuse des établissements d'enseignement et des services à l'enfance.</p>
         </div>
@@ -13,7 +13,7 @@
     <!-- INTRO IMAGE -->
     <section class="intro-image-section">
         <div class="container">
-            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=2000&q=80" alt="Inspection OFIECS" class="intro-image">
+            <img src="/about/a1.jpg" alt="Inspection OFIECS" class="intro-image">
         </div>
     </section>
 
@@ -90,7 +90,7 @@
     <section class="split-section">
         <div class="container">
             <div class="split-grid">
-                <img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=1400&q=80" alt="Méthodologie d'inspection" class="split-image">
+                <img src="/about/a2.jpg" alt="Méthodologie d'inspection" class="split-image">
                 <div class="split-content">
                     <h2>Méthodologie d'Inspection Rigoureuse</h2>
                     <p>Notre processus d'inspection suit une méthodologie standardisée, transparente et fondée sur des critères objectifs mesurables.</p>
@@ -263,7 +263,7 @@
                         <li><strong>Amélioration continue :</strong> Accompagnement et développement</li>
                     </ul>
                 </div>
-                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1400&q=80" alt="Principes OFIECS" class="split-image" style="order: 2;">
+                <img src="/about/a3.jpg" alt="Principes OFIECS" class="split-image" style="order: 2;">
             </div>
         </div>
     </section>
@@ -316,7 +316,7 @@ export default {
 
 /* HERO */
 .hero {
-  padding: 200px 0 120px;
+  padding: 240px 0 120px;
   background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
   text-align: center;
   color: #ffffff;
@@ -324,24 +324,25 @@ export default {
 
 .hero-badge {
   display: inline-block;
-  padding: 12px 32px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  padding: 8px 20px;
+  background: transparent;
   border-radius: 100px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #a1a1a6;
 }
 
 .hero h1 {
-  font-size: 96px;
-  font-weight: 900;
-  letter-spacing: -3px;
+  font-size: 112px;
+  font-weight: 700;
+  letter-spacing: -4px;
   margin-bottom: 32px;
-  line-height: 1.1;
+  line-height: 1.05;
+  color: #ffffff;
 }
 
 .hero p {
@@ -349,14 +350,14 @@ export default {
   font-weight: 300;
   max-width: 900px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.95);
 }
 
 /* INTRO IMAGE */
 .intro-image-section {
   padding: 120px 0;
-  background: #f8fafc;
+  background: #ffffff;
 }
 
 .intro-image {
@@ -364,12 +365,13 @@ export default {
   height: 700px;
   object-fit: cover;
   border-radius: 32px;
-  box-shadow: 0 20px 60px rgba(30, 58, 138, 0.15);
+  box-shadow: none;
 }
 
 /* MISSION */
 .mission {
   padding: 200px 0;
+  background: #ffffff;
 }
 
 .mission-content {
@@ -378,9 +380,9 @@ export default {
 }
 
 .mission h2 {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -2px;
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: -3px;
   margin-bottom: 48px;
   color: #1e3a8a;
   text-align: center;
@@ -388,16 +390,16 @@ export default {
 
 .lead {
   font-size: 32px;
-  font-weight: 400;
-  color: #1e40af;
+  font-weight: 300;
+  color: #000000;
   margin-bottom: 40px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .mission-content p {
   font-size: 20px;
-  line-height: 1.8;
-  color: #334155;
+  line-height: 1.6;
+  color: #6e6e73;
   margin-bottom: 32px;
 }
 
@@ -411,47 +413,46 @@ export default {
 .pillar {
   text-align: center;
   padding: 48px 32px;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border-radius: 24px;
-  border: 2px solid #e2e8f0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
   transition: all 0.3s ease;
 }
 
 .pillar:hover {
-  transform: translateY(-8px);
-  border-color: #2563eb;
-  box-shadow: 0 12px 48px rgba(30, 58, 138, 0.1);
+  transform: translateY(-4px);
 }
 
 .pillar-icon {
   font-size: 64px;
   margin-bottom: 24px;
+  filter: grayscale(0.3);
 }
 
 .pillar h3 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #1e3a8a;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
   margin-bottom: 16px;
 }
 
 .pillar p {
-  font-size: 16px;
-  color: #64748b;
-  line-height: 1.6;
+  font-size: 17px;
+  color: #6e6e73;
+  line-height: 1.5;
   margin: 0;
 }
 
 /* VALUES */
 .values {
   padding: 200px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: #fafafa;
 }
 
 .values h2 {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -2px;
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: -3px;
   margin-bottom: 120px;
   color: #1e3a8a;
   text-align: center;
@@ -468,17 +469,15 @@ export default {
 .value-item {
   text-align: center;
   padding: 60px 40px;
-  background: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.08);
-  transition: all 0.4s ease;
-  border: 2px solid transparent;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  border: none;
 }
 
 .value-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 48px rgba(30, 58, 138, 0.15);
-  border-color: #2563eb;
+  transform: translateY(-4px);
 }
 
 .domain-number {
@@ -486,31 +485,32 @@ export default {
   width: 80px;
   height: 80px;
   line-height: 80px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  background: #000000;
   color: #ffffff;
   font-size: 40px;
-  font-weight: 900;
+  font-weight: 700;
   border-radius: 50%;
   margin-bottom: 32px;
 }
 
 .value-item h3 {
   font-size: 28px;
-  font-weight: 700;
-  color: #1e3a8a;
+  font-weight: 600;
+  color: #000000;
   margin-bottom: 20px;
 }
 
 .value-item p {
-  font-size: 18px;
-  color: #64748b;
-  line-height: 1.7;
+  font-size: 17px;
+  color: #6e6e73;
+  line-height: 1.5;
   margin: 0;
 }
 
 /* SPLIT SECTION */
 .split-section {
   padding: 200px 0;
+  background: #ffffff;
 }
 
 .split-grid {
@@ -525,21 +525,21 @@ export default {
   height: 700px;
   object-fit: cover;
   border-radius: 32px;
-  box-shadow: 0 20px 60px rgba(30, 58, 138, 0.15);
+  box-shadow: none;
 }
 
 .split-content h2 {
-  font-size: 64px;
-  font-weight: 900;
-  letter-spacing: -2px;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -3px;
   margin-bottom: 32px;
   color: #1e3a8a;
 }
 
 .split-content p {
   font-size: 20px;
-  color: #334155;
-  line-height: 1.8;
+  color: #6e6e73;
+  line-height: 1.6;
   margin-bottom: 40px;
 }
 
@@ -549,9 +549,9 @@ export default {
 }
 
 .split-content li {
-  font-size: 18px;
-  color: #334155;
-  line-height: 2;
+  font-size: 17px;
+  color: #6e6e73;
+  line-height: 1.8;
   padding-left: 32px;
   position: relative;
   margin-bottom: 16px;
@@ -561,20 +561,20 @@ export default {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #2563eb;
-  font-weight: 700;
+  color: #000000;
+  font-weight: 600;
   font-size: 20px;
 }
 
 .split-content strong {
-  color: #1e3a8a;
-  font-weight: 700;
+  color: #000000;
+  font-weight: 600;
 }
 
 /* STATS BANNER */
 .stats-banner {
   padding: 120px 0;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  background: #000000;
 }
 
 .stats-banner .stats-grid {
@@ -586,28 +586,28 @@ export default {
 
 .stat-number {
   font-size: 96px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -3px;
   margin-bottom: 16px;
   color: #ffffff;
 }
 
 .stat-label {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+  color: #a1a1a6;
   font-weight: 400;
 }
 
 /* TEAM */
 .team {
   padding: 200px 0;
-  background: #f8fafc;
+  background: #ffffff;
 }
 
 .team h2 {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -2px;
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: -3px;
   margin-bottom: 32px;
   color: #1e3a8a;
   text-align: center;
@@ -615,11 +615,11 @@ export default {
 
 .team-intro {
   font-size: 24px;
-  color: #64748b;
+  color: #6e6e73;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 120px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .team-grid {
@@ -638,44 +638,45 @@ export default {
   object-fit: cover;
   border-radius: 24px;
   margin-bottom: 32px;
-  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.12);
+  box-shadow: none;
   transition: all 0.3s ease;
 }
 
 .team-member:hover .team-photo {
-  transform: scale(1.05);
-  box-shadow: 0 12px 48px rgba(30, 58, 138, 0.2);
+  transform: scale(1.02);
+  box-shadow: none;
 }
 
 .team-name {
   font-size: 28px;
-  font-weight: 700;
-  color: #1e3a8a;
+  font-weight: 600;
+  color: #000000;
   margin-bottom: 8px;
 }
 
 .team-role {
-  font-size: 18px;
-  color: #2563eb;
+  font-size: 17px;
+  color: #6e6e73;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .team-bio {
-  font-size: 16px;
-  color: #64748b;
-  line-height: 1.7;
+  font-size: 15px;
+  color: #6e6e73;
+  line-height: 1.5;
 }
 
 /* CERTIFICATIONS */
 .certifications {
   padding: 200px 0;
+  background: #fafafa;
 }
 
 .certifications h2 {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -2px;
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: -3px;
   margin-bottom: 32px;
   color: #1e3a8a;
   text-align: center;
@@ -683,11 +684,11 @@ export default {
 
 .cert-intro {
   font-size: 24px;
-  color: #64748b;
+  color: #6e6e73;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 120px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .cert-grid {
@@ -700,47 +701,46 @@ export default {
 
 .cert-item {
   padding: 60px;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border-radius: 24px;
-  border: 2px solid #e2e8f0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
   transition: all 0.3s ease;
 }
 
 .cert-item:hover {
-  transform: translateY(-8px);
-  border-color: #2563eb;
-  box-shadow: 0 12px 48px rgba(30, 58, 138, 0.1);
+  transform: translateY(-4px);
 }
 
 .cert-icon {
   font-size: 64px;
   margin-bottom: 32px;
+  filter: grayscale(0.3);
 }
 
 .cert-item h3 {
   font-size: 28px;
-  font-weight: 700;
-  color: #1e3a8a;
+  font-weight: 600;
+  color: #000000;
   margin-bottom: 20px;
 }
 
 .cert-item p {
-  font-size: 18px;
-  color: #64748b;
-  line-height: 1.7;
+  font-size: 17px;
+  color: #6e6e73;
+  line-height: 1.5;
   margin: 0;
 }
 
 /* TIMELINE */
 .timeline {
   padding: 200px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: #ffffff;
 }
 
 .timeline h2 {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -2px;
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: -3px;
   margin-bottom: 120px;
   color: #1e3a8a;
   text-align: center;
@@ -752,7 +752,7 @@ export default {
   gap: 80px;
   margin-bottom: 80px;
   padding-bottom: 80px;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 1px solid #d2d2d7;
 }
 
 .timeline-item:last-child {
@@ -761,25 +761,22 @@ export default {
 
 .timeline-year {
   font-size: 72px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -2px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
 }
 
 .timeline-content h3 {
   font-size: 32px;
-  font-weight: 700;
-  color: #1e3a8a;
+  font-weight: 600;
+  color: #000000;
   margin-bottom: 20px;
 }
 
 .timeline-content p {
-  font-size: 20px;
-  color: #64748b;
-  line-height: 1.8;
+  font-size: 17px;
+  color: #6e6e73;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -787,13 +784,13 @@ export default {
 .cta {
   padding: 200px 0;
   text-align: center;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  background: #000000;
   color: #ffffff;
 }
 
 .cta h2 {
   font-size: 96px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -3px;
   margin-bottom: 48px;
   color: #ffffff;
@@ -806,8 +803,8 @@ export default {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+  color: #a1a1a6;
 }
 
 .contact-info {
@@ -815,28 +812,27 @@ export default {
 }
 
 .contact-info p {
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #a1a1a6;
 }
 
 .btn {
   display: inline-block;
-  padding: 24px 64px;
-  background: #d4af37;
-  color: #1e3a8a;
+  padding: 22px 64px;
+  background: #ffffff;
+  color: #000000;
   text-decoration: none;
   border-radius: 100px;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+  box-shadow: none;
 }
 
 .btn:hover {
-  background: #b8930f;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 48px rgba(212, 175, 55, 0.4);
+  background: #e8e8ed;
+  transform: translateY(-2px);
 }
 
 /* RESPONSIVE */
@@ -845,8 +841,13 @@ export default {
     padding: 0 40px;
   }
 
+  .hero {
+    padding: 160px 0 100px;
+  }
+
   .hero h1 {
     font-size: 64px;
+    letter-spacing: -2px;
   }
 
   .hero p {
@@ -858,7 +859,8 @@ export default {
   .team h2,
   .certifications h2,
   .timeline h2 {
-    font-size: 56px;
+    font-size: 64px;
+    letter-spacing: -2px;
   }
 
   .mission-pillars,
@@ -877,9 +879,18 @@ export default {
     height: 500px;
   }
 
+  .split-content h2 {
+    font-size: 56px;
+    letter-spacing: -2px;
+  }
+
   .stats-banner .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
+  }
+
+  .stat-number {
+    font-size: 72px;
   }
 
   .cert-grid {
@@ -897,6 +908,7 @@ export default {
 
   .cta h2 {
     font-size: 64px;
+    letter-spacing: -2px;
   }
 }
 
@@ -910,7 +922,8 @@ export default {
   }
 
   .hero h1 {
-    font-size: 40px;
+    font-size: 48px;
+    letter-spacing: -1.5px;
   }
 
   .hero p {
@@ -919,6 +932,7 @@ export default {
 
   .intro-image {
     height: 400px;
+    border-radius: 24px;
   }
 
   .mission,
@@ -936,26 +950,29 @@ export default {
   .team h2,
   .certifications h2,
   .timeline h2 {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 60px;
+    letter-spacing: -1.5px;
   }
 
   .lead {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .mission-content p,
   .split-content p,
   .timeline-content p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .split-content h2 {
-    font-size: 36px;
+    font-size: 40px;
+    letter-spacing: -1.5px;
   }
 
   .split-image {
     height: 350px;
+    border-radius: 24px;
   }
 
   .stat-number {
@@ -968,7 +985,8 @@ export default {
   }
 
   .cta h2 {
-    font-size: 40px;
+    font-size: 48px;
+    letter-spacing: -1.5px;
   }
 
   .cta p {
@@ -977,7 +995,7 @@ export default {
 
   .btn {
     padding: 20px 48px;
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 </style>

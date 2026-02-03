@@ -61,4 +61,13 @@ table {
   border-spacing: 0;
   width: 100%;
 }
+
+h2 {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-bottom: 48px;
+  color: #1e3a8a;
+  text-align: center;
+}
 </style> 
